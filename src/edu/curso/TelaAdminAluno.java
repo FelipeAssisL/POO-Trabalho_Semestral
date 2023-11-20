@@ -156,7 +156,6 @@ public class TelaAdminAluno extends Application {
                 gridAvisosAluno.setHgap(10);
                 tabAvisos.setContent(gridAvisosAluno);
 
-                
                 Tab tabEventos = new Tab("Aulas");
                 
                 
