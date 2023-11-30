@@ -3,6 +3,7 @@ package edu.curso;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -13,7 +14,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class TelaAdminAluno extends Application {
@@ -26,6 +26,10 @@ public class TelaAdminAluno extends Application {
     TextArea txtDescricaoAviso = new TextArea();
     TextField txtNomeEquipamento = new TextField();
     TextField txtDescricaoEquip = new TextField();
+    TextField txtAulas = new TextField();
+    TextField txtTutor = new TextField();
+    DatePicker dtAula = new DatePicker();
+    TextArea txtDescricaoAulas = new TextArea();
     TableView<Aviso> tableAvisos = new TableView<>();
     TableView<Equipamento> tableEquipamentos = new TableView<>();
     TextField txtBuscaEquipamento = new TextField();
@@ -38,7 +42,7 @@ public class TelaAdminAluno extends Application {
                 this.stage = stage;
                 stage.setTitle("MadFit - ADMIN");
                 BorderPane root = new BorderPane();
-                Scene scene = new Scene(root, 800, 500);
+                Scene scene = new Scene(root, 800, 650);
                 
                 tabPane = new TabPane();
 
@@ -71,11 +75,40 @@ public class TelaAdminAluno extends Application {
                 
                 tabAvisos.setContent(gridAvisos);
                 
-                
-                
-                
+                // TELA DE AULAS - ADMIN
                 Tab tabEventos = new Tab("Aulas");
+                GridPane gridAulas = new GridPane();
                 
+                Button btnPesquisarAula = new Button("PESQUISAR");
+                Button btnSalvarAula = new Button("GRAVAR");
+                btnSalvarAula.setStyle("-fx-base: green;");
+                Button btnExcluirAula = new Button("EXCLUIR");
+                btnExcluirAula.setStyle("-fx-base: red;");
+                
+                gridAulas.add(new Label("Manutenção de Aulas"),0,0);
+                
+                gridAulas.add(new Label("Aula"), 0, 1);
+                gridAulas.add(txtAulas, 1, 1);
+                gridAulas.add(new Label("Data"), 0, 2);
+                gridAulas.add(dtAula,1,2);
+                
+                gridAulas.add(new Label("Descrição"), 0, 4);
+                gridAulas.add(txtTutor, 1, 3);
+
+                gridAulas.add(new Label("Descrição"), 0, 3);
+
+                gridAulas.add(txtDescricaoAulas, 1, 4);
+                txtDescricaoAulas.setMaxHeight(80);
+                txtDescricaoAulas.setMaxWidth(400);
+                
+                txtAulas.setMinWidth(400);
+                
+                gridAulas.add(btnPesquisarAula, 2, 1);
+                gridAulas.add(btnSalvarAula, 0, 5);
+                gridAulas.add(btnExcluirAula, 2, 5);
+                gridAulas.setVgap(25);
+                gridAulas.setHgap(10);
+                tabEventos.setContent(gridAulas);
                 
                     //TELA DE EQUIPAMENTOS - ADMIN
                 Tab tabEquipamentos = new Tab("Equipamentos");
