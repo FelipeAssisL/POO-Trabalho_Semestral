@@ -8,14 +8,14 @@ public class Aula {
 	private String nomeAula;
 	private String descricaoAula;
 	private String horaAula;
-	private Instrutor instrutor;
+	private String nomeInstrutor;
 	private LocalDate dataAula;
 
-	public Instrutor getInstrutor() {
-		return instrutor;
+	public String getNomeInstrutor() {
+		return nomeInstrutor;
 	}
-	public void setInstrutor(Instrutor instrutor) {
-		this.instrutor = instrutor;
+	public void setNomeInstrutor(String nomeInstrutor) {
+		this.nomeInstrutor = nomeInstrutor;
 	}
 	
 	public int getId() {

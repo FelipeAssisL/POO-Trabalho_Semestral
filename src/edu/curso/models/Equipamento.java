@@ -2,21 +2,14 @@ package edu.curso.models;
 
 public class Equipamento {
 	
-	private int idEquip;
-	private String nomeEquipe;
+	private String nomeEquip;
 	private String descricaoEquip;
 	
-	public int getIdEquip() {
-		return idEquip;
+	public String getNomeEquip() {
+		return nomeEquip;
 	}
-	public void setIdEquip(int idEquip) {
-		this.idEquip = idEquip;
-	}
-	public String getNomeEquipe() {
-		return nomeEquipe;
-	}
-	public void setNomeEquipe(String nomeEquipe) {
-		this.nomeEquipe = nomeEquipe;
+	public void setNomeEquip(String nomeEquipe) {
+		this.nomeEquip = nomeEquipe;
 	}
 	public String getDescricaoEquip() {
 		return descricaoEquip;
