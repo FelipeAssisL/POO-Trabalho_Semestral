@@ -1,4 +1,4 @@
-package br.com.model;
+package edu.curso.models;
 
 public class SolicitacaoPlano {
 	
@@ -30,5 +30,4 @@ public class SolicitacaoPlano {
 	public void setPlano(Plano plano) {
 		this.plano = plano;
 	}
-	
 }

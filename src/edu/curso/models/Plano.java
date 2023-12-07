@@ -1,7 +1,7 @@
-package br.com.model;
+package edu.curso.models;
 
 public class Plano {
-
+	
 	private String tituloPlano;
 	private float valorMensal;
 	private float valorAnual;
@@ -32,6 +32,4 @@ public class Plano {
 	public void setBeneficios(String beneficios) {
 		this.beneficios = beneficios;
 	}
-
-	
 }

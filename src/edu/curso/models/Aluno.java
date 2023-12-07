@@ -1,4 +1,4 @@
-package br.com.model;
+package edu.curso.models;
 
 import java.time.LocalDate;
 
@@ -15,7 +15,6 @@ public class Aluno {
 	private Plano planoContratado;
 	
 
-	
 	public int getIdAluno() {
 		return idAluno;
 	}
@@ -64,5 +63,4 @@ public class Aluno {
 	public void setPlanoContratado(Plano planoContratado) {
 		this.planoContratado = planoContratado;
 	}
-	
 }
